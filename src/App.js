@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './Components/Header/Header';
 import routes from './routes';
 import {connect} from 'react-redux';
+import {loginUser} from './redux/user_reducer';
 
 class App extends Component {
   componentDidMount() {
@@ -23,4 +24,4 @@ class App extends Component {
 
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {loginUser})(App);
