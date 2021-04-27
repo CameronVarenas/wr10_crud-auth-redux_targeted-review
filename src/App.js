@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './App.scss';
 import Header from './Components/Header/Header';
 import routes from './routes';
+import {connect} from 'react-redux';
 
 class App extends Component {
   componentDidMount() {
@@ -20,4 +21,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => state
+
+export default connect(mapStateToProps)(App);
